@@ -41,8 +41,109 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# 🩺 DocSpot – A Seamless Doctor Appointment Booking App
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+DocSpot is a full-stack web application built using the MERN stack to simplify doctor appointment scheduling. It helps patients connect with trusted doctors, manage bookings efficiently, and provides admins with tools to maintain control over the system.
+
+---
+
+## ✅ Features
+
+### 👤 User (Patient)
+- 🔐 Sign up and log in securely
+- 🔍 Browse doctors by specialization or name
+- 📅 Book appointments based on doctor availability
+- 🗓️ View upcoming and past appointments
+- 🔔 Receive status updates (Pending, Approved, Rejected)
+
+### 👨‍⚕️ Doctor
+- 🔐 Doctor registration and login
+- 📝 Create and manage profile (specialty, experience, etc.)
+- 📥 View and respond to appointment requests
+- ✔️ Approve or reject bookings
+- ✏️ Update appointment status (Completed, Cancelled, etc.)
+
+### 🛡️ Admin
+- 🔐 Secure admin login
+- ✅ Verify or reject doctor profiles
+- 📋 View and manage all users and doctors
+- 🚫 Block/unblock users or doctors
+- 📊 Monitor all appointments in the system
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend:
+- React.js
+- Axios
+- Bootstrap / Tailwind CSS
+
+### Backend:
+- Node.js
+- Express.js
+- MongoDB (with Mongoose)
+
+### Others:
+- JWT (Authentication)
+- Bcrypt.js (Password Hashing)
+- Cloudinary (Optional - image handling)
+- Postman (for API testing)
+
+---
+
+## 🌐 Live Demo
+
+> 🔗 https://drive.google.com/file/d/1GGZiVJUmHw7-XH69VtVszrgRaRb3yV0Q/view?usp=drivesdk
+> _Deploy your frontend on Vercel or Netlify and backend on Render or Railway._
+
+---
+
+## 📡 API Endpoints Overview
+
+### Auth Routes
+- `POST /api/user/signup` – User Registration  
+- `POST /api/user/login` – User Login  
+
+### Doctor Routes
+- `POST /api/doctor/signup` – Doctor Registration  
+- `GET /api/doctor/appointments` – Get Doctor Appointments  
+- `PUT /api/doctor/appointment/:id` – Update Appointment Status  
+
+### Admin Routes
+- `GET /api/admin/doctors` – View All Doctors  
+- `PUT /api/admin/verify-doctor/:id` – Verify/Reject Doctor  
+- `GET /api/admin/users` – View All Users  
+
+---
+
+## 📚 What I Learned
+
+- Built a full-stack MERN project from scratch
+- Implemented secure JWT authentication with role-based access
+- Designed RESTful APIs for user/doctor/admin flows
+- Gained hands-on experience with MongoDB and Mongoose relationships
+- Practiced UI design and state management in React
+
+---
+
+## 🚀 Future Enhancements
+
+- 📩 Email/SMS notifications for booking updates
+- 🔍 Advanced filters for doctor search
+- 🧠 AI-based doctor recommendations (by rating/specialty)
+- 📅 Calendar sync with Google Calendar
+- 💬 Live chat between patient and doctor
+- 📱 Fully mobile-optimized layout
+
+---
+
+## 📦 Folder Structure
+
+```bash
+DocSpot/
+├── client/          # React frontend
+├── server/          # Express backend
+├── .env             # Environment variables
+└── README.md
